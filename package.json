@@ -1,0 +1,11 @@
+{
+  "name": "eshopping",
+  "version": "1.0.0",
+  "description": "Ecommerce project using PHP",
+  "main": "index.js",
+  "author": "Imtiaz Epu <imtiazepu@programmer.net>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}

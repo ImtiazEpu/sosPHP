@@ -1,0 +1,14 @@
+{
+    "name": "imtiaz/eshopping",
+    "description": "Ecommerce Project Using PHP",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "Imtiaz Epu",
+            "email": "imtiazepu@programmer.net"
+        }
+    ]
+}
