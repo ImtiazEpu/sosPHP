@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
 
     <!-- Bootstrap core CSS -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
     <style>
@@ -43,5 +43,3 @@
         </li>
     </ul>
 </nav>
-<div class="container-fluid">
-    <div class="row">
