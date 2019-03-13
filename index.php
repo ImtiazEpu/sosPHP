@@ -210,6 +210,5 @@
             </div>
         </div>
     </div>
-
 </main>
 <?php require_once "partials/_footer.php";?>
