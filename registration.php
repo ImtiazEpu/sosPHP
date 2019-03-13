@@ -1,7 +1,7 @@
 <? require_once "partials/_header.php" ?>
 <main role="main" class="login-page">
     <div class="container text-center">
-        <form class="form-signin py-5">
+        <form action="" method="post" class="form-signin py-5" enctype="multipart/form-data" >
             <h1 class="h3 mb-3 font-weight-normal">Create an account</h1>
             <label for="inputName" class="sr-only">Full Name</label>
             <input type="text" id="inputName" class="form-control" placeholder="Full name" required >
