@@ -3,7 +3,8 @@
     "description": "Ecommerce Project Using PHP",
     "type": "project",
     "require": {
-        "phpmailer/phpmailer": "^6.0"
+        "phpmailer/phpmailer": "^6.0",
+        "phroute/phroute": "^2.1"
     },
     "authors": [
         {
