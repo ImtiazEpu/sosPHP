@@ -8,6 +8,10 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "feather-icons": "^4.19.0",
+    "holderjs": "^2.9.6",
     "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2"
   }
 }
