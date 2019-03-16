@@ -7,19 +7,16 @@ use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\RouteParser;
 
 require_once 'vendor/autoload.php';
-$router = new RouteCollector(new RouteParser());
+$router = new RouteCollector( new RouteParser() );
 
-$router->get('/eshopping', function () {
-    return "Hello form phroute";
-});
-
-$dispatcher = new Dispatcher($router->getData());
+require_once __DIR__.'/route.php';
+$dispatcher = new Dispatcher( $router->getData() );
 try {
-    $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-} catch (HttpRouteNotFoundException $e) {
+    $response = $dispatcher->dispatch( $_SERVER[ 'REQUEST_METHOD' ] , parse_url( $_SERVER[ 'REQUEST_URI' ] , PHP_URL_PATH ) );
+} catch ( HttpRouteNotFoundException $e ) {
     echo $e->getMessage();
     die();
-} catch (HttpMethodNotAllowedException $e) {
+} catch ( HttpMethodNotAllowedException $e ) {
     echo $e->getMessage();
     die();
 }

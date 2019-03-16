@@ -11,5 +11,10 @@
             "name": "Imtiaz Epu",
             "email": "imtiazepu@programmer.net"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
 }
