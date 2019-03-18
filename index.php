@@ -8,6 +8,9 @@ use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\RouteParser;
 
 require_once 'vendor/autoload.php';
+session_start();
+
+
 $capsule = new Capsule();
 $capsule->addConnection( [
     'driver' => 'mysql' ,
@@ -22,12 +25,6 @@ $capsule->addConnection( [
 
 $capsule->setAsGlobal();
 $capsule->bootEloquent();
-$users = Capsule::table('tbl_user')->get();
-
-echo '<pre>';
-    var_dump($users);
-echo '</pre>';
-die();
 
 $router = new RouteCollector( new RouteParser() );
 
