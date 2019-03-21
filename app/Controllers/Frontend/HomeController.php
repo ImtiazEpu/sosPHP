@@ -129,6 +129,11 @@ class HomeController extends Controller
                 }
                 if (password_verify( $password , $user->password ) === true) {
                     $_SESSION[ 'success' ] = 'Logged in';
+                    $_SESSION[ 'user' ] = [
+                        'id' => $user->id,
+                        'username' => $user->username,
+                        'email' => $user->email,
+                    ];
                     header( 'Location:/eshopping/dashboard' );
                     exit();
                 }
@@ -164,6 +169,14 @@ class HomeController extends Controller
         }
         $errors[] = 'Invalid token provided';
         $_SESSION[ 'error' ] = $errors;
+        header( 'Location:/eshopping/login' );
+        exit();
+    }
+
+    public function getLogout()
+    {
+        unset($_SESSION['user']);
+        $_SESSION[ 'success' ] = 'You have been logged out';
         header( 'Location:/eshopping/login' );
         exit();
     }
