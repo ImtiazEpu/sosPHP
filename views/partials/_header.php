@@ -40,7 +40,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.php">Ecommerce System</a>
+        <a class="navbar-brand" href="/eshopping">Ecommerce System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,7 +48,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item m-auto">
-                    <a class="nav-link" href="index.php">Home</a>
+                    <a class="nav-link" href="/eshopping">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="category.html">Categories</a>
@@ -62,6 +62,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact.html">Contact</a>
                 </li>
+
             </ul>
 
             <form class="form-inline my-2 my-lg-0">
@@ -77,6 +78,8 @@
                     <i class="fa fa-shopping-cart"></i> Cart
                     <span class="badge badge-light">3</span>
                 </a>
+                    <a class="btn btn-outline-info ml-3" href="/eshopping/login">Login</a>
+                    <a class="btn btn-outline-info ml-2" href="/eshopping/register">Register</a>
             </form>
         </div>
     </div>
