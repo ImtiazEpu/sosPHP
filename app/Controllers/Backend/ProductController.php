@@ -3,9 +3,9 @@ namespace App\Controllers\Backend;
 
 use App\Controllers\Controller;
 
-class dashboardController extends Controller {
+class ProductController extends Controller {
     public function getIndex()
     {
-        $this->view("dashboard");
+        view("/backend/product/index");
     }
 }

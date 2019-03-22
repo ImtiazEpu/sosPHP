@@ -8,8 +8,6 @@
     <meta name="generator" content="Jekyll v3.8.5">
     <title>Dashboard Template · Bootstrap</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
-
     <!-- Bootstrap core CSS -->
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 

@@ -12,9 +12,10 @@ $router->filter('auth', function (){
 });
 
 $router->controller( '/eshopping' , \App\Controllers\Frontend\HomeController::class );
-$router->controller( '/eshopping/user' , \App\Controllers\Frontend\UsersController::class );
 
-$router->group(['before'=>'auth'], function (RouteCollector $router){
-    $router->controller( '/eshopping/dashboard' , \App\Controllers\Backend\dashboardController::class );
+$router->group(['before'=>'auth','prefix'=>'/eshopping'], function (RouteCollector $router){
+    $router->controller( '/dashboard' , \App\Controllers\Backend\DashboardController::class );
+    $router->controller( '/categories' , \App\Controllers\Backend\CategoryController::class );
+    $router->controller( '/products' , \App\Controllers\Backend\ProductController::class );
 });
 

@@ -13,12 +13,12 @@ class HomeController extends Controller
 {
     public function getIndex()
     {
-        $this->view( 'home' );
+        view( 'home' );
     }
 
     public function getRegister()
     {
-        $this->view( 'register' );
+        view( 'register' );
     }
 
     public function postRegister()
@@ -93,6 +93,7 @@ class HomeController extends Controller
 
             $_SESSION[ 'success' ] = 'User registration successful!';
             header( 'Location:/eshopping/login' );
+            exit();
         }
         $_SESSION[ 'error' ] = $errors;
         header( 'Location:/eshopping/register' );
@@ -101,7 +102,7 @@ class HomeController extends Controller
 
     public function getLogin()
     {
-        $this->view( 'login' );
+        view( 'login' );
     }
 
     public function postLogin()

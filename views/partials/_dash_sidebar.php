@@ -2,21 +2,27 @@
     <div class="sidebar-sticky">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link active" href="/eshopping/dashboard">
                     <span data-feather="home"></span>
                     Dashboard <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/eshopping/categories">
                     <span data-feather="file"></span>
-                    Orders
+                    Categories
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/eshopping/products">
                     <span data-feather="shopping-cart"></span>
                     Products
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/eshopping/dashboard/orders">
+                    <span data-feather="file"></span>
+                    Orders
                 </a>
             </li>
             <li class="nav-item">
