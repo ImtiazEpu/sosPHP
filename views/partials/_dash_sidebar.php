@@ -8,13 +8,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/eshopping/categories">
+                <a class="nav-link" href="/eshopping/dashboard/categories">
                     <span data-feather="file"></span>
                     Categories
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/eshopping/products">
+                <a class="nav-link" href="/eshopping/dashboard/products">
                     <span data-feather="shopping-cart"></span>
                     Products
                 </a>

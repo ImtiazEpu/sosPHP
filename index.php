@@ -9,6 +9,7 @@ use Phroute\Phroute\RouteParser;
 
 require_once 'vendor/autoload.php';
 session_start();
+define( 'BASE_URL' , 'http://localhost/eshopping' );
 
 
 $capsule = new Capsule();

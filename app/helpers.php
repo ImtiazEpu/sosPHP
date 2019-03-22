@@ -23,8 +23,18 @@ if (!function_exists( 'partial_view' )) {
 if (!function_exists( 'redirect' )) {
     function redirect($location = '/eshopping')
     {
-        header( 'Location: ' . $location );
+        header( 'Location: ' . BASE_URL . '/' . $location );
         exit();
+    }
+}
+
+if (!function_exists( 'dd' )) {
+    function dd($data)
+    {
+        echo '<pre>';
+        var_dump( $data );
+        echo '</pre>';
+        die();
     }
 }
 

@@ -6,9 +6,9 @@
         <p>&copy <?/* echo date('Y') */?> e-shopping system </p>
     </div>
 </footer>-->
-<script src="node_modules/jquery/dist/jquery.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="node_modules/feather-icons/dist/feather.min.js"></script>
-<script src="asset/js/dashboard.js"></script>
+<script src=<?php echo BASE_URL."/node_modules/jquery/dist/jquery.min.js"?>></script>
+<script src=<?php echo BASE_URL."/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"?>></script>
+<script src=<?php echo BASE_URL."/node_modules/feather-icons/dist/feather.min.js"?>></script>
+<script src=<?php echo BASE_URL."/asset/js/dashboard.js"?>></script>
 </body>
 </html>

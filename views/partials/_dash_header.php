@@ -6,10 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Dashboard Template · Bootstrap</title>
+    <title>Dashboard</title>
+
+    <!-- Font Awesome's Package-->
+    <link href=<?php echo BASE_URL."/node_modules/@fortawesome/fontawesome-free/css/all.min.css"?> rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href=<?php echo BASE_URL."/node_modules/bootstrap/dist/css/bootstrap.min.css"?> rel="stylesheet">
 
 
     <style>
@@ -29,7 +32,7 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="asset/css/dashboard.css" rel="stylesheet">
+    <link href=<?php echo BASE_URL."/asset/css/dashboard.css"?> rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">

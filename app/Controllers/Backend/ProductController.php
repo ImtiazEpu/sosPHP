@@ -6,6 +6,6 @@ use App\Controllers\Controller;
 class ProductController extends Controller {
     public function getIndex()
     {
-        view("/backend/product/index");
+        backend_view("/product/index");
     }
 }
