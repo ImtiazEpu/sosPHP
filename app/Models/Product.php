@@ -7,4 +7,9 @@ class Product extends Model{
     protected $guarded =[];
 
     public $timestamps = false;
+
+    public function product_photo()
+    {
+        return $this->hasOne(ProductImage::class);
+    }
 }

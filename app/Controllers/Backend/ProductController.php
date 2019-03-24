@@ -18,13 +18,14 @@ class ProductController extends Controller
         $validator = new Validator();
 
         $errors = [];
-        $title = $_POST[ 'title' ];
-        $category_id = (int)$_POST[ 'category_id' ];
-        $slug = $this->slugify($_POST[ 'title' ]);
-        $description = $_POST[ 'description' ];
-        $price = $_POST[ 'price' ];
-        $sale_price = $_POST[ 'sale_price' ];
-        $active = (int)$_POST[ 'active' ];
+        $title         = $_POST[ 'title' ];
+        $category_id   = (int)$_POST[ 'category_id' ];
+        $slug          = $this->slugify($_POST[ 'title' ]);
+        $description   = $_POST[ 'description' ];
+        $price         = $_POST[ 'price' ];
+        $sale_price    = $_POST[ 'sale_price' ];
+        $active        = (int)$_POST[ 'active' ];
+        $product_photo = $_FILES[ 'product_photo' ];
 
         // validation
         if ($validator::length(4,255)->validate( $title ) === false) {
@@ -39,16 +40,28 @@ class ProductController extends Controller
         if ($validator::numeric()->positive()->validate( $sale_price ) === false) {
             $errors[ 'sale_price' ] = 'Sale Price must be a positive value';
         }
+       /* if ($validator::image()->validate( $product_photo[ 'name' ]) === false) {
+            $errors[ 'product_photo' ] = 'Product photo must be a valid image';
+        }*/
         if (empty( $errors )) {
-            Product::create( [
+            $product = Product::create( [
                 'title'       => $title ,
                 'category_id' => $category_id ,
-                'slug'        => strtolower( $slug ) ,
+                'slug'        => $slug,
                 'description' => $description ,
                 'price'       => $price ,
                 'sale_price'  => $sale_price ,
                 'active'      => $active ,
             ] );
+            //process file upload
+            $file_name = 'product_photo_' . time();
+            $extension = explode( '.' , $product_photo[ 'name' ] );
+            $ext = end( $extension );
+            move_uploaded_file( $product_photo[ 'tmp_name' ] , 'media/products/' . $file_name . '.' . $ext );
+            $product->product_photo()->create([
+                'image_path' => $file_name . '.' . $ext,
+            ]);
+
             $_SESSION[ 'success' ] = 'Product Created successful!';
             redirect( 'dashboard/products' );
         }

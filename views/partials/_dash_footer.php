@@ -9,6 +9,7 @@
 <script src=<?php echo BASE_URL."/node_modules/jquery/dist/jquery.min.js"?>></script>
 <script src=<?php echo BASE_URL."/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"?>></script>
 <script src=<?php echo BASE_URL."/node_modules/feather-icons/dist/feather.min.js"?>></script>
+<script src=<?php echo BASE_URL."/node_modules/holderjs/holder.min.js"?>></script>
 <script src=<?php echo BASE_URL."/asset/js/dashboard.js"?>></script>
 </body>
 </html>
