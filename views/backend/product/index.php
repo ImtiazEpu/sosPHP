@@ -7,7 +7,6 @@
                     <h1 class="h2">Add Product</h1>
                 </div>
                 <? partials_view( "_notification" ); ?>
-                <? $categories = \App\Models\Category::all(); ?>
                 <form action="/eshopping/dashboard/products" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="title">Title</label>
@@ -52,7 +51,6 @@
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Product List</h1>
                 </div>
-                <? $products = \App\Models\Product::all(); ?>
                 <? if ($products->count() > 0): ?>
                     <table class="table table-bordered">
                         <thead>
@@ -68,7 +66,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <? $products = \App\Models\Product::all();
+                        <?
                         foreach ($products as $product):
                             ?>
                             <tr>

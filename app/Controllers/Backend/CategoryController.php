@@ -10,7 +10,8 @@ class CategoryController extends Controller
 {
     public function getIndex()
     {
-        backend_view( "/category/index" );
+        $categories = Category::all();
+        backend_view( "/category/index",['categories'=>$categories]);
     }
 
     public function postIndex()
@@ -45,6 +46,7 @@ class CategoryController extends Controller
         if ($id === null) {
             redirect( 'dashboard/categories' );
         }
+
         $_SESSION[ 'category_id' ] = $id;
         backend_view( "/category/edit" );
         unset( $_SESSION[ 'category_id' ] );

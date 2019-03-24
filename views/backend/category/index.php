@@ -26,8 +26,7 @@
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Categories List</h1>
                 </div>
-                <? $category = \App\Models\Category::all(); ?>
-                <? if ($category->count() > 0): ?>
+                <? if ($categories->count() > 0): ?>
                     <table class="table table-bordered">
                         <thead>
                         <tr>
@@ -39,9 +38,7 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <? $categories = \App\Models\Category::all();
-                        foreach ($categories as $category):
-                            ?>
+                        <?  foreach ($categories as $category):?>
                             <tr>
                                 <td><? echo $category->id; ?></td>
                                 <td><? echo $category->title; ?></td>

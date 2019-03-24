@@ -7,7 +7,7 @@
                     <h1 class="h2">Edit Category</h1>
                 </div>
                 <? partials_view( "_notification" ); ?>
-                <? $category = \App\Models\Category::find( $_SESSION[ 'category_id' ] ); ?>
+                  <? $category = \App\Models\Category::find( $_SESSION[ 'category_id' ] ); ?>
                 <form action="/eshopping/dashboard/categories/edit/<? echo $category->id; ?>" method="post">
                     <div class="form-group">
                         <label for="title">Title</label>
