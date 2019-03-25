@@ -30,8 +30,11 @@
                                 </a>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Add to cart
-                                        </button>
+                                        <form action="/eshopping/cart" method="post">
+                                            <input type="hidden" name="id" value="<?echo $product->id?>">
+                                            <button type="submit" class="btn btn-sm btn-outline-secondary">Add To
+                                                Cart</button>
+                                        </form>
                                     </div>
                                     <span class="text-muted">BDT <? echo $product->price; ?></span>
                                 </div>

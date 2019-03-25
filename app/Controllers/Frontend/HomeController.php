@@ -15,14 +15,16 @@ class HomeController extends Controller
 {
     public function getIndex()
     {
+        $cart = $_SESSION[ 'cart' ] ?? [];
         $categories = Category::select(['title', 'slug'])->get();
         $products = Product::with('product_photo')->select(['id','title', 'price', 'slug'])->where('active', 1)->get();
-        view( 'home',['categories'=>$categories, 'products'=>$products] );
+        view( 'home',['categories'=>$categories, 'products'=>$products, 'cart'=>$cart] );
     }
 
     public function getRegister()
     {
-        view( 'register' );
+        $cart = $_SESSION[ 'cart' ] ?? [];
+        view( 'register',['cart'=>$cart] );
     }
 
     public function postRegister()
@@ -106,7 +108,8 @@ class HomeController extends Controller
 
     public function getLogin()
     {
-        view( 'login' );
+        $cart = $_SESSION[ 'cart' ] ?? [];
+        view( 'login',['cart'=>$cart] );
     }
 
     public function postLogin()
@@ -191,9 +194,10 @@ class HomeController extends Controller
         if($slug === null){
             redirect('/eshopping');
         }
+        $cart = $_SESSION[ 'cart' ] ?? [];
         $categories = Category::select(['title', 'slug'])->get();
         $product = Product::where('slug', $slug)->first();
-        view('product', ['product'=>$product, 'categories'=>$categories]);
+        view('product', ['product'=>$product, 'categories'=>$categories, 'cart'=>$cart]);
 
     }
 }

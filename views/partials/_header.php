@@ -87,9 +87,9 @@
                         </button>
                     </div>
                 </div>
-                <a class="btn btn-success btn-sm ml-3" href="cart.html">
+                <a class="btn btn-success btn-sm ml-3" href="/eshopping/cart">
                     <i class="fa fa-shopping-cart"></i> Cart
-                    <span class="badge badge-light">3</span>
+                    <span class="badge badge-light"><? echo \count($cart)?></span>
                 </a>
                     <a class="btn btn-outline-info ml-3" href="/eshopping/login">Login</a>
                     <a class="btn btn-outline-info ml-2" href="/eshopping/register">Register</a>
