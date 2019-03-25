@@ -47,9 +47,10 @@ class CategoryController extends Controller
             redirect( 'dashboard/categories' );
         }
 
-        $_SESSION[ 'category_id' ] = $id;
-        backend_view( "/category/edit" );
-        unset( $_SESSION[ 'category_id' ] );
+//        $_SESSION[ 'category_id' ] = $id;
+        $category = Category::findOrfail($id);
+        backend_view( "/category/edit", ['category'=>$category] );
+//        unset( $_SESSION[ 'category_id' ] );
     }
 
     public function postEdit($id = null)
