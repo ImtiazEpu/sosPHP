@@ -152,4 +152,8 @@ footer {
 footer a {
     color: #f8f9fa!important
 }
+.pro-img-size{
+    width: 100%;
+    height: 225px;
+}
 

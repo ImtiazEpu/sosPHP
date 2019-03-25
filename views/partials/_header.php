@@ -13,9 +13,9 @@
     <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
            integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">-->
     <!-- Font Awesome's Package-->
-    <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href=<?php echo BASE_URL."/node_modules/@fortawesome/fontawesome-free/css/all.min.css"?> rel="stylesheet">
     <!-- Bootstrap core CSS -->
-    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href=<?php echo BASE_URL."/node_modules/bootstrap/dist/css/bootstrap.min.css"?> rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -34,7 +34,7 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="asset/css/main.css" rel="stylesheet">
+    <link href=<?php echo BASE_URL."/asset/css/main.css"?> rel="stylesheet">
 </head>
 <body>
 <header>
@@ -51,7 +51,20 @@
                     <a class="nav-link" href="/eshopping">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="category.html">Categories</a>
+                    <!--<a class="nav-link" href="category.html">Categories</a>-->
+                    <div class="dropdown">
+                        <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Categories
+                        </a>
+                        <div class="dropdown-menu mt-2"  aria-labelledby="dropdownMenuButton">
+                            <? foreach ($categories as $category):?>
+                            <a class="dropdown-item"  href="eshopping/category/<? echo $category->slug;?>">
+                                <? echo $category->title;?>
+                            </a>
+                            <?endforeach;?>
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="product.php">Product</a>

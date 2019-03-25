@@ -72,13 +72,13 @@
                             <tr>
                                 <td><? echo $product->id; ?></td>
                                 <td class="text-center">
-                                    <?if ($product->product_photo):?>
-                                    <img width="50" height="50"
-                                         src="/eshopping/media/products/<? echo $product->product_photo->image_path ;
-                                         ?>" alt=""/>
-                                    <?else:?>
-                            <img src="holder.js/50x50?text=No image" alt=""/>
-                        <?endif;?>
+                                    <? if ($product->product_photo):?>
+                                        <img width="50"
+                                             src="/eshopping/media/products/<? echo $product->product_photo->image_path;
+                                             ?>" alt=""/>
+                                    <? else:?>
+                                        <img src="holder.js/50x50?text=No image" alt=""/>
+                                    <? endif; ?>
                                 </td>
                                 <td><? echo $product->title; ?></td>
                                 <td><? echo $product->slug; ?></td>
